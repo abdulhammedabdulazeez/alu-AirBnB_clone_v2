@@ -16,6 +16,7 @@ class test_Place(test_basemodel):
     def test_city_id(self):
         """ """
         new = self.value()
+        new.city_id = city.id
         self.assertEqual(type(new.city_id), str)
 
     def test_user_id(self):
@@ -31,6 +32,7 @@ class test_Place(test_basemodel):
     def test_description(self):
         """ """
         new = self.value()
+        new.description = ""
         self.assertEqual(type(new.description), str)
 
     def test_number_rooms(self):
@@ -46,6 +48,7 @@ class test_Place(test_basemodel):
     def test_max_guest(self):
         """ """
         new = self.value()
+        new.max_guest = 6
         self.assertEqual(type(new.max_guest), int)
 
     def test_price_by_night(self):
@@ -56,11 +59,13 @@ class test_Place(test_basemodel):
     def test_latitude(self):
         """ """
         new = self.value()
+        new.city_id = "142443.37454"
         self.assertEqual(type(new.latitude), float)
 
     def test_longitude(self):
         """ """
         new = self.value()
+        new.city_id = "1435243.37454"
         self.assertEqual(type(new.latitude), float)
 
     def test_amenity_ids(self):
